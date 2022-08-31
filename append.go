@@ -32,3 +32,10 @@ func (a *Append) CheckArray() {
 		"next index is %v,\n"+
 		"and the array capacity is %v\n", a.Data, a.NextIndex, cap(a.Data))
 }
+
+func (a *Append) RemoveLast() {
+	fmt.Println("--remove last value in array...")
+
+	a.NextIndex--
+	a.Data[a.NextIndex] = 0
+}
