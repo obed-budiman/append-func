@@ -24,3 +24,11 @@ func (a *Append) Insert(newData int) {
 	a.Data[a.NextIndex] = newData
 	a.NextIndex++
 }
+
+func (a *Append) CheckArray() {
+	fmt.Println("--checking array...")
+
+	fmt.Printf("Current data inside array is %+v,\n"+
+		"next index is %v,\n"+
+		"and the array capacity is %v\n", a.Data, a.NextIndex, cap(a.Data))
+}
